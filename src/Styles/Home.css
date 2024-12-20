@@ -1,0 +1,184 @@
+.greetSec{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 60vh;
+    width: auto;
+    background-color: aliceblue;
+}
+
+.greet{
+    height: 10vh;
+    width: 15vw;
+    margin-left: 5vw;
+    font-size: 2.5vh;
+}
+
+.offerings{
+    min-height: 25vh;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vh;
+    background-color:azure;
+    flex-wrap: wrap;
+}
+
+.offering{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+    row-gap: 1vh;
+    height: 8vh;
+    min-width: 8vw;
+    width: 8vw;
+    font-size: 2.25vh;
+    text-wrap: wrap;
+}
+
+.actionSec{
+    display: flex;
+    height: 10vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2vmin;
+    color: green;
+
+    button{
+        min-width: 10vw;
+        height: 4vh;
+        border-radius: 2vmin;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.5vw;
+        border: none;
+    }
+}
+
+.contactSec{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 50vh;
+    width: auto;
+    /* background-color: aqua; */
+    flex-wrap: wrap;
+}
+
+.locSec{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 45vh;
+    min-width: 35vw;
+    background-color: aliceblue;
+    margin: 2vmin;
+    border-radius: 5vmin;
+}
+
+.locSecRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vmin;
+    column-gap: 4vmin;
+}
+
+.locSecCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    row-gap: 0.5vh;
+}
+
+.formSec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    min-width: 50vw;
+    width: max(50vw, 340px);
+    background-color: aliceblue;
+    margin: 2vmin;
+    border-radius: 5vmin;
+
+    button{
+        height: 5vh;
+        width: 15vw;
+        background-color: aquamarine;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5vw;
+        border: none;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+.fsForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    input{
+        width: 20vw;
+        height: 4vh;
+        border-radius: 5px;
+        padding: 0 0 0 1vmin;
+        border: none;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
+.formRow{
+    display: flex;
+    column-gap: 5vw;
+    align-items: center;
+}
+
+.formCol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.expSec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 25vh;
+    padding-top: 4vmin;
+    background-color: aliceblue;
+}
+
+.dataSec{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin: 2vmin;
+}
+
+.dataOpt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 15vw;
+    column-gap: 3vw;
+}
