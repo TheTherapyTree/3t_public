@@ -1,0 +1,41 @@
+.MainContentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10vh 5vw 5vh 5vw ;
+    line-height: max(4vmin, 24px);
+    min-height: 68vh;
+}
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    margin: 2vmin;
+    cursor: pointer;
+}
+
+.ques{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: 525;
+    font-size: 2.25vh;
+}
+
+.ans{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    font-size: 2.1vh;
+}
+
+.titl{
+    margin: 2vmin;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: grey;
+}

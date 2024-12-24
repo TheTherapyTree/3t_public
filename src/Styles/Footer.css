@@ -5,6 +5,7 @@
     background-color:rgb(215, 250, 250);
     color: darkgreen;
     min-height: 15vh;
+    row-gap: min(3vmin,10px);
 }
 
 .footRow{

@@ -3,14 +3,23 @@
     justify-content: space-between;
     align-items: center;
     width: 97vw;
-    height: 5vh;
+    height: 7vh;
     /* margin: 0 0 0 1vmax; */
     padding: 1vh 2vw 1vh 2vw;
     position:absolute;
     top: 0;
     left: 0;
     /* z-index: 1000; */
-    background-color: none;
+    background-color: rgba(255, 255, 255);
+}
+
+.call{
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5vw;
 }
 
 .hl{
@@ -29,6 +38,7 @@
     /* border-radius: 2px; */
     padding: 8px;
     font-size: 1.75vh;
+    cursor: pointer;
 }
 
 .hol{
@@ -38,6 +48,7 @@
     height: 1px;
     padding: 8px;
     font-size: 1.75vh;
+    cursor: pointer;
 }
 
 button{
@@ -46,10 +57,52 @@ button{
     align-items: center;
     row-gap: 0.5vw;
     margin-left: 2vw;
-    padding: 1vmin;
+    padding: 2vmin;
     height: min(3vh, 40px);
     border-radius: min(2vw,10px);
     background-color: aquamarine;
     border: none;
     font-size: 1.5vh;
+}
+
+.mobMenu{
+    margin: 0 2vw 0 2vw;
+}
+
+.mobMenuCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 20vw;
+    padding: 3vh;
+    row-gap: 2.5vh;
+    position: absolute;
+    top: 5.5vh;
+    right: 3vw;
+    background-color: white;
+    border: 1px solid aquamarine;
+    border-radius: 10px;
+}
+
+.hm{
+    font-size: 14px;
+    border-bottom: 1.25px solid aquamarine;
+}
+@media screen and (max-width : 435px) {
+    .lapview{
+        display: none;
+    }
+
+    button{
+        height: 4.5vh;
+        padding: 3vmin 2vmin 3vmin 1vmin;
+    }
+}
+
+@media  screen and (min-width : 435px) {
+    .mobMenu{
+        display: none;
+    }
 }
