@@ -26,7 +26,7 @@ const Faq = () => {
                 <meta 
                     name="description"
                     content="Have any questions? Get your answers from our set of faqs." />
-                <link rel="canonical" href="/faq" />
+                <link rel="canonical" href="https://thetherapytree.in/faq" />
             </Helmet>
             <div className="MainContentContainer">
                 <div className="titl">

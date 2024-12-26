@@ -67,7 +67,7 @@ const Home = () => {
                 <meta 
                     name="description" 
                     content="Therapy Center in Aganampudi for children with special needs"/>
-                <link rel="canonical" href="/" />
+                <link rel="canonical" href="https://thetherapytree.in/" />
             </Helmet>
             <div className="homeContainer">
                 <div className="greetSec">

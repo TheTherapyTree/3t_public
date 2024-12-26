@@ -11,7 +11,7 @@ const About = () => {
                 <meta
                     name="description"
                     content="With the vision of providing affordable therapy for children with special needs, our story and mission is something to know about." />
-                <link rel="canonical" href="/about" />
+                <link rel="canonical" href="https://thetherapytree.in/about" />
             </Helmet>
             <div className="abtContentContainer">
                 <div className="abtTitle">
