@@ -3,12 +3,10 @@ import "../Styles/Staff.css";
 
 const Staff = () => {
     return(
-        <div className="MainContentContainer">
+        <div className="MainContentContainerMd" >
             <div className="staffMem">
                 <div className="staffMemIntro">
-                    <div className="smImg">
-                        Img
-                    </div>
+                    <div className="smImg" />
                     <div className="smDet">
                         <span style={{fontWeight:'550'}}>Indumathi</span>
                         <span>Director, MD</span>

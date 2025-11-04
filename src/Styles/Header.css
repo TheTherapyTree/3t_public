@@ -4,13 +4,14 @@
     align-items: center;
     width: 97vw;
     height: 7vh;
-    /* margin: 0 0 0 1vmax; */
+    /* margin: 0 3vw; */
     padding: 1vh 2vw 1vh 2vw;
     position:absolute;
     top: 0;
     left: 0;
     /* z-index: 1000; */
-    background-color: rgba(255, 255, 255);
+    /* background-color: rgba(255, 255, 255); */
+    background-color: #036c5f;
 }
 
 .call{
@@ -37,8 +38,9 @@
     border-right: 1px solid lightgrey;
     /* border-radius: 2px; */
     padding: 8px;
-    font-size: 1.75vh;
+    font-size: 2vh;
     cursor: pointer;
+    color: white;
 }
 
 .hol{
@@ -47,8 +49,9 @@
     align-items: center;
     height: 1px;
     padding: 8px;
-    font-size: 1.75vh;
+    font-size: 2vh;
     cursor: pointer;
+    color: white;
 }
 
 button{
@@ -90,6 +93,13 @@ button{
     font-size: 14px;
     border-bottom: 1.25px solid aquamarine;
 }
+
+.logoText{
+    font-size : 2.5vh;
+    font-weight : 600;
+    color : white;
+}
+
 @media screen and (max-width : 435px) {
     .lapview{
         display: none;
@@ -98,6 +108,9 @@ button{
     button{
         height: 4.5vh;
         padding: 3vmin 2vmin 3vmin 1vmin;
+    }
+    .logoText{
+        font-size: 16px;
     }
 }
 

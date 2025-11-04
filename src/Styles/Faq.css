@@ -2,40 +2,230 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10vh 5vw 5vh 5vw ;
-    line-height: max(4vmin, 24px);
+    align-items: center;
+    padding: 10vh 5vw 5vh 5vw;
+    line-height: 1.7;
     min-height: 68vh;
+    max-width: 1100px;
+    
+    width: 94%;
+}
+
+.titl{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+.titl h1{
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+}
+
+.titl p{
+    font-size: clamp(14px, 1.8vw, 18px);
+    color: var(--muted);
+    margin: 0;
+    font-weight: 400;
+}
+
+.faqContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .faq{
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items: flex-start;
-    margin: 2vmin;
+    justify-content: flex-start;
+    align-items: stretch;
     cursor: pointer;
+    background-color: var(--surface);
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.faq:first-child{
+    border-top: 2px solid rgba(148, 163, 184, 0.3);
+    border-radius: 12px 12px 0 0;
+}
+
+.faq:last-child{
+    border-bottom: 2px solid rgba(148, 163, 184, 0.3);
+    border-radius: 0 0 12px 12px;
+}
+
+.faq:hover{
+    background-color: var(--surface-2);
+}
+
+.faq.active{
+    background-color: var(--surface-2);
+    border-top-color: rgba(14, 165, 165, 0.3);
+    border-bottom-color: rgba(14, 165, 165, 0.3);
 }
 
 .ques{
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
-    font-weight: 525;
-    font-size: 2.25vh;
+    padding: 2vh 2.5vw;
+    gap: 1.5vw;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+
+.faq.active .ques{
+    color: var(--brand-2);
+}
+
+.quesIcon{
+    font-size: 22px !important;
+    color: var(--brand-2);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq.active .quesIcon{
+    color: var(--brand-2);
+    opacity: 1;
+}
+
+.faq:hover .quesIcon{
+    opacity: 1;
+}
+
+.quesText{
+    flex: 1;
+    text-align: left;
+}
+
+.expandIcon{
+    font-size: 24px !important;
+    color: var(--muted);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq.active .expandIcon{
+    color: var(--brand-2);
+    transform: rotate(180deg);
 }
 
 .ans{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items:flex-start;
-    font-size: 2.1vh;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2.5vw;
+    opacity: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: var(--muted);
+    line-height: 1.8;
 }
 
-.titl{
-    margin: 2vmin;
-    font-size: 2.5vh;
-    font-weight: 600;
-    color: grey;
+.ans.show{
+    max-height: 2000px;
+    padding: 0 2.5vw 2.5vh 2.5vw;
+    opacity: 1;
+    padding-left: calc(2.5vw + 38px);
+}
+
+.ans span,
+.ans p{
+    margin: 0 0 12px 0;
+}
+
+.ans ul{
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.ans li{
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+.ans li:first-child{
+    margin-top: 0;
+}
+
+.ans li:last-child{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .MainContentContainer{
+        padding: 8vh 4vw 4vh 4vw;
+    }
+
+    .titl{
+        margin-bottom: 3vh;
+    }
+
+    .ques{
+        padding: 1.8vh 4vw;
+        gap: 12px;
+        font-size: 15px;
+    }
+
+    .quesIcon{
+        font-size: 20px !important;
+    }
+
+    .expandIcon{
+        font-size: 20px !important;
+    }
+
+    .ans{
+        font-size: 14px;
+        padding-left: 4vw;
+    }
+
+    .ans.show{
+        padding: 0 4vw 2vh 4vw;
+        padding-left: calc(4vw + 32px);
+    }
+
+    .faq:first-child{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .faq:last-child{
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .MainContentContainer{
+        padding: 8vh 1.5vw 3vh 1vw;
+    }
+
+    .ques{
+        padding: 1.5vh 3vw;
+        font-size: 14px;
+    }
+
+    .quesIcon{
+        font-size: 18px !important;
+    }
+
+    .ans{
+        padding-left: 3vw;
+        font-size: 13px;
+    }
+
+    .ans.show{
+        padding: 0 3vw 1.8vh 3vw;
+        padding-left: calc(3vw + 28px);
+    }
 }

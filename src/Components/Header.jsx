@@ -26,12 +26,11 @@ const Header = () => {
     return(
         <div className="header">
             <div className="hl">
-                <span style={{fontSize : '2.1vh', fontWeight : '600'}}>The Therapy Tree</span>
+                <span className="logoText">The Therapy Tree</span>
             </div>
             <div className="hl">
                 <div className="hl lapview">
-                    <div className="ho" onClick={() => navigate("/")}>Home</div>
-                    {/* <div className="ho">Our Services</div> */}
+                    <div className="ho" style={{color : 'white'}} onClick={() => navigate("/")}>Home</div>
                     <div className="ho" onClick={() => navigate("/faq")}>FAQ</div>
                     <div className="ho" onClick={() => navigate("/directordesk")}>Director's Desk</div>
                     <div className="hol" onClick={() => navigate("/about")}>About Us</div>

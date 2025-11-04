@@ -2,14 +2,19 @@
 
 .greetSec{
     display: flex;
-    justify-content: left;
+    /* justify-content: left;
+    align-items: flex-end; */
+    justify-content: center;
     align-items: flex-end;
     height: 60vh;
     width: 100%;
+    background-color: rgb(255, 250, 244);
     /* background-image: url('/Volumes/Drive E/The Therapy Tree/3t_public/public/savbg.jpeg'); */
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../../public/savbg.jpeg');
+    background-image: url('../../public/3t_hero.png');
+    /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../../public/3t_hero.png'); */
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     
 }
 
@@ -17,17 +22,10 @@
     height: auto;
     max-width: auto;
     margin-left: 3vw;
-    font-size: 6vh;
-    font-weight: 800;
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    /* color: rgba(0, 0, 0, 0.6); */
-    color:rgba(0, 0, 0, 0.5);
-    /* color: transparent; */
-    /* background-image: linear-gradient( rgba(0, 150, 0), rgba(150, 0, 0), rgba(0, 0, 0, 0.7));
-    background-clip: text;
-    -webkit-background-clip: text; */
-    /* border: 1px solid rgba(0, 0, 0, 0.6);
-    border-radius: 10px; */
+    font-size: 4vh;
+    font-weight: 600;
+    /* color:rgba(0, 0, 0, 0.8); */
+    color: #036c5f;
 }
 
 .offerings{
@@ -38,7 +36,8 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 2vh;
-    background-color:azure;
+    background-image: linear-gradient(to bottom, rgb(255, 250, 244), rgba(240, 255, 255, 0.8), rgba(240, 255, 255));
+    /* background-color:azure; */
 
 }
 
@@ -65,7 +64,8 @@
     justify-content: center;
     align-items: center;
     padding: 2vmin;
-    color: green;
+    color: white;
+    background-color: #036c5f;
 
     button{
         min-width: 10vw;
@@ -85,11 +85,12 @@
 .contactSec{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     min-height: 50vh;
     width: 100%;
     /* background-color: aqua; */
     flex-wrap: wrap;
+    gap: 2vmin;
 }
 
 .locSec{
@@ -97,11 +98,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    height: 45vh;
+    min-height: 50vh;
     min-width: 35vw;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    background-color: #d2f9f6;
     margin: 2vmin;
-    border-radius: 5vmin;
+    border-radius: 22px;
+    /* border: 1px solid rgba(148, 163, 184, 0.25); */
+    padding: 3vh 2vw;
 }
 
 .locSecRow{
@@ -117,7 +121,9 @@
     flex-direction: column;
     justify-content: center;
     align-items:flex-start;
+    text-align: left;
     row-gap: 0.5vh;
+    font-size: large;
 }
 
 .formSec{
@@ -125,24 +131,123 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 45vh;
+    min-height: 50vh;
     min-width: 50vw;
-    width: max(50vw, 340px);
-    background-color: aliceblue;
+    width: max(50vw, 440px);
+    /* background-color: aliceblue; */
+    background-color: #d2f9f6;
     margin: 2vmin;
-    border-radius: 5vmin;
+    border-radius: 22px;
+    /* border: 1px solid rgba(148, 163, 184, 0.25); */
+    padding: 3vh 2vw;
+    overflow-y: auto;
 
     button{
         height: 5vh;
         aspect-ratio: 3;
-        background-color: aquamarine;
+        /* background: aquamarine; */
+        background: #036c5f;
         display: flex;
         align-items: center;
         justify-content: center;
         column-gap: 0.5vw;
         border: none;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+        border-radius: 999px;
     }
+}
+
+.submitMessage{
+    width: 100%;
+    margin-bottom: 2vh;
+    padding: 1.5vh 1.5vw;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vw;
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.08);
+    animation: slideIn 0.3s ease-out;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submitMessage.success{
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.08));
+    border: 1.5px solid rgba(16, 185, 129, 0.3);
+    color: #065f46;
+}
+
+.submitMessage.error{
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.08));
+    border: 1.5px solid rgba(239, 68, 68, 0.3);
+    color: #991b1b;
+}
+
+.messageContent{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+}
+
+.messageIcon{
+    font-size: 24px !important;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.submitMessage.success .messageIcon{
+    color: #10b981;
+}
+
+.submitMessage.error .messageIcon{
+    color: #ef4444;
+}
+
+.messageText{
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.messageCloseBtn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    color: inherit;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+.messageCloseBtn:hover{
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.submitMessage.success .messageCloseBtn:hover{
+    background: rgba(5, 95, 70, 0.1);
+}
+
+.submitMessage.error .messageCloseBtn:hover{
+    background: rgba(153, 27, 27, 0.1);
 }
 
 .fsForm{
@@ -150,23 +255,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 2vh;
+    row-gap: 1.5vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    padding: 1vh 0;
 
     input{
         width: 20vw;
         height: 4vh;
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 0 0 0 1vmin;
-        border: none;
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        background: #ffffff;
+        box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.2);
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        outline: none;
     }
+}
+
+.formField{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.errorMsg{
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.fsForm input.error,
+.fsForm select.error{
+    border: 2px solid #ef4444 !important;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15) !important;
+}
+
+.fsForm button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
 }
 
 .formRow{
     display: flex;
     column-gap: 5vw;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .formCol{
@@ -181,9 +319,8 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 25vh;
-    padding-top: 4vmin;
-    background-color: aliceblue;
+    height: 30vh;
+    padding-top: 6vmin;
 }
 
 .dataSec{
@@ -194,6 +331,7 @@
     height: 100%;
     margin: 2vmin;
     font-size: 2vh;
+    color: #036c5f;
 }
 
 .dataOpt{
@@ -201,49 +339,58 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 15vw;
-    width: 15vw;
+    width: 25vw;
+    aspect-ratio: 1;
+    max-height: 20vh;
     column-gap: 3vw;
+    border-radius: 10px;
+    padding: min(2vh, 10px) min(2vw, 10px);
+    background-image: linear-gradient(to bottom, #b3e0dc, #8ff2e8, #4fb9af);
 }
 
 .dataVal1{
     font-size: 5vh;
+    color: #036c5f;
 }
 
 .dataVal2{
     font-size: 4vh;
+    color: #036c5f;
 }
 
 .dataVal3{
     font-size: 2vh;
+    color: #036c5f;
 }
 
 .locTitle{
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-weight: 525;
 }
 
 .serv{
     width: 20vw;
-        height: 4vh;
-        border-radius: 5px;
-        padding: 0 0 0 1vmin;
-        border: none;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 4vh;
+    border-radius: 10px;
+    padding: 0 0 0 1vmin;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    outline: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width : 430px) {
     .greetSec{
         height: 45vh;
         width: 100%;
-        background-color: aliceblue;
     }
 
     .greet{
         width: auto;
-        font-size: 15px;
-        margin-bottom: 11vh;
-        color: black;
+        font-size: 18px;
+        margin-bottom: 5vh;
+        color: #036c5f;
     }
 
     .dataVal1{
@@ -275,7 +422,22 @@
         font-size: 16px;
     }
 
+    .locSec{
+        min-height: auto;
+        padding: 2vh 3vw;
+        width: 90%;
+    }
+
+    .formSec{
+        min-height: auto;
+        padding: 2vh 3vw;
+        width: 90%;
+        max-height: 70vh;
+    }
+
     .fsForm{
+        row-gap: 1vh;
+        padding: 0.5vh 0;
         input{
             width: 40vw;
             background-color: white;
@@ -284,6 +446,29 @@
 
     .serv{
         width: 41vw;
-            background-color: white;
+        background-color: white;
+    }
+
+    .formRow{
+        column-gap: 3vw;
+        row-gap: 1vh;
+    }
+
+    .submitMessage{
+        padding: 1.2vh 3vw;
+        margin-bottom: 1.5vh;
+    }
+
+    .messageText{
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .messageIcon{
+        font-size: 20px !important;
+    }
+
+    .messageCloseBtn{
+        padding: 6px;
     }
 }
